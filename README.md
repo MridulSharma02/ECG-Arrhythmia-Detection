@@ -48,6 +48,12 @@ The model is trained and evaluated on the **PTB-XL dataset**, a large-scale, cli
 
 ## 📂 Project Structure
 ```
+├── outputs/                    # Outputs
+│   ├── evaluation_plots/
+│   ├── xai_plots/
+│   ├── final_plots/
+│   ├── reports/
+│   └── README.md
 ├── app.py                      # Streamlit web app
 ├── inference.py                # Model inference script
 ├── run_all.py                  # Run full pipeline
@@ -173,9 +179,16 @@ The model focuses on clinically relevant ECG regions:
 ---
 
 ## 📊 Detailed Evaluation Results
-Due to the large size of outputs, all results are available here:
+All model outputs, evaluation metrics, and XAI visualizations are available in the [`outputs/`](./outputs/) directory.
 
-🔗 https://drive.google.com/drive/folders/125h8Jg_mmaGSOpd_2UjBVfgxI72Bjs0x?usp=sharing  
+### 📁 What's Included:
+- **[Model Comparison](./outputs/final_plots/model_comparison.png)** - Performance comparison between models
+- **[Training Curves](./outputs/final_plots/)** - Training history and convergence
+- **[Evaluation Plots](./outputs/evaluation_plots/)** - Confusion matrices, ROC curves, PR curves
+- **[XAI Visualizations](./outputs/xai_plots/)** - GradCAM, attention maps, saliency maps
+- **[Performance Reports](./outputs/reports/)** - Detailed metrics and analysis
+
+For complete documentation, see [outputs/README.md](./outputs/README.md) 
 
 ### 📁 Includes:
 - Confusion matrices  
