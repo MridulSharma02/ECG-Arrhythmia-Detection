@@ -1,0 +1,167 @@
+======================================================================
+       ECG DIAGNOSTIC ANALYSIS REPORT
+       AI-Assisted Interpretation — For Clinical Review Only
+======================================================================
+  Report Generated : 2026-03-19 11:36:04
+  Record ID        : PTB-XL #65
+  Analysis Case    : 1
+  Model            : CNN+BiLSTM (Macro AUROC = 0.908)
+  Signal           : 12-lead ECG, 10s @ 500 Hz (2 ms/sample)
+======================================================================
+
+SECTION 1: PREDICTED DIAGNOSES
+----------------------------------------
+  NORM     21.2%  [Uncertain             ]    Not detected  [Ground truth: negative]
+  MI       12.8%  [Uncertain             ]    Not detected  [Ground truth: negative]
+  STTC      5.0%  [Uncertain             ]    Not detected  [Ground truth: negative]
+  CD       85.5%  [Very High Confidence  ]  ► DETECTED  [Ground truth: POSITIVE]
+  HYP      31.3%  [Uncertain             ]    Not detected  [Ground truth: negative]
+
+SECTION 2: CLINICAL CLASS DESCRIPTIONS
+----------------------------------------
+  CD (85.5%): Conduction Disturbance — abnormal electrical conduction pathway
+
+SECTION 3: DETECTED IRREGULARITY REGIONS
+----------------------------------------
+  Method: Saliency threshold = mean + 2×SD across all leads.
+  Severity = predicted_probability × mean_saliency_in_region.
+  Timestamps reported in milliseconds (2 ms/sample at 500 Hz).
+
+  ── Class: NORM  (P = 21.2%) ──
+    Region 1:
+      Timestamp     : 3702 ms — 3728 ms  (duration: 26 ms)
+      Leads affected: I, II, III, aVR, aVL, aVF, V1, V2, V3, V4, V5, V6
+      Mean saliency : 0.0053  (threshold: 0.0034)
+      Severity      : 0.0011  [Low]
+    Region 2:
+      Timestamp     : 3730 ms — 3752 ms  (duration: 22 ms)
+      Leads affected: I, II, III, aVR, aVL, aVF, V1, V2, V3, V4, V5, V6
+      Mean saliency : 0.0041  (threshold: 0.0034)
+      Severity      : 0.0009  [Low]
+    Region 3:
+      Timestamp     : 4598 ms — 4620 ms  (duration: 22 ms)
+      Leads affected: I, II, III, aVR, aVL, aVF, V1, V2, V3, V4, V5, V6
+      Mean saliency : 0.0058  (threshold: 0.0034)
+      Severity      : 0.0012  [Low]
+    Region 4:
+      Timestamp     : 4664 ms — 4684 ms  (duration: 20 ms)
+      Leads affected: I, II, III, aVR, aVL, aVF, V1, V2, V3, V4, V5, V6
+      Mean saliency : 0.0044  (threshold: 0.0034)
+      Severity      : 0.0009  [Low]
+    Region 5:
+      Timestamp     : 5430 ms — 5452 ms  (duration: 22 ms)
+      Leads affected: I, II, III, aVR, aVL, aVF, V1, V2, V3, V4, V5, V6
+      Mean saliency : 0.0044  (threshold: 0.0034)
+      Severity      : 0.0009  [Low]
+    Region 6:
+      Timestamp     : 5486 ms — 5516 ms  (duration: 30 ms)
+      Leads affected: I, II, III, aVR, aVL, aVF, V1, V2, V3, V4, V5, V6
+      Mean saliency : 0.0052  (threshold: 0.0034)
+      Severity      : 0.0011  [Low]
+    Region 7:
+      Timestamp     : 7992 ms — 8012 ms  (duration: 20 ms)
+      Leads affected: I, II, III, aVR, aVL, aVF, V1, V2, V3, V4, V5, V6
+      Mean saliency : 0.0055  (threshold: 0.0034)
+      Severity      : 0.0012  [Low]
+    Region 8:
+      Timestamp     : 9590 ms — 9638 ms  (duration: 48 ms)
+      Leads affected: I, II, III, aVR, aVL, aVF, V1, V2, V3, V4, V5, V6
+      Mean saliency : 0.0084  (threshold: 0.0034)
+      Severity      : 0.0018  [Low]
+    Region 9:
+      Timestamp     : 9654 ms — 9676 ms  (duration: 22 ms)
+      Leads affected: I, II, III, aVR, aVL, aVF, V1, V2, V3, V4, V5, V6
+      Mean saliency : 0.0058  (threshold: 0.0034)
+      Severity      : 0.0012  [Low]
+
+  ── Class: CD  (P = 85.5%) ──
+    Region 1:
+      Timestamp     : 3702 ms — 3728 ms  (duration: 26 ms)
+      Leads affected: I, II, III, aVR, aVL, aVF, V1, V2, V3, V4, V5, V6
+      Mean saliency : 0.0055  (threshold: 0.0036)
+      Severity      : 0.0047  [Low]
+    Region 2:
+      Timestamp     : 4598 ms — 4620 ms  (duration: 22 ms)
+      Leads affected: I, II, III, aVR, aVL, aVF, V1, V2, V3, V4, V5, V6
+      Mean saliency : 0.0059  (threshold: 0.0036)
+      Severity      : 0.0051  [Low]
+    Region 3:
+      Timestamp     : 5486 ms — 5510 ms  (duration: 24 ms)
+      Leads affected: I, II, III, aVR, aVL, aVF, V1, V2, V3, V4, V5, V6
+      Mean saliency : 0.0052  (threshold: 0.0036)
+      Severity      : 0.0044  [Low]
+    Region 4:
+      Timestamp     : 7992 ms — 8016 ms  (duration: 24 ms)
+      Leads affected: I, II, III, aVR, aVL, aVF, V1, V2, V3, V4, V5, V6
+      Mean saliency : 0.0056  (threshold: 0.0036)
+      Severity      : 0.0048  [Low]
+    Region 5:
+      Timestamp     : 9590 ms — 9638 ms  (duration: 48 ms)
+      Leads affected: I, II, III, aVR, aVL, aVF, V1, V2, V3, V4, V5, V6
+      Mean saliency : 0.0097  (threshold: 0.0036)
+      Severity      : 0.0083  [Low]
+    Region 6:
+      Timestamp     : 9654 ms — 9680 ms  (duration: 26 ms)
+      Leads affected: I, II, III, aVR, aVL, aVF, V1, V2, V3, V4, V5, V6
+      Mean saliency : 0.0063  (threshold: 0.0036)
+      Severity      : 0.0054  [Low]
+
+  ── Class: HYP  (P = 31.3%) ──
+    Region 1:
+      Timestamp     : 178 ms — 204 ms  (duration: 26 ms)
+      Leads affected: I, II, III, aVR, aVL, aVF, V1, V2, V3, V4, V5, V6
+      Mean saliency : 0.0029  (threshold: 0.0016)
+      Severity      : 0.0009  [Low]
+    Region 2:
+      Timestamp     : 1014 ms — 1034 ms  (duration: 20 ms)
+      Leads affected: I, II, III, aVR, aVL, aVF, V1, V2, V3, V4, V5, V6
+      Mean saliency : 0.0022  (threshold: 0.0016)
+      Severity      : 0.0007  [Low]
+    Region 3:
+      Timestamp     : 1842 ms — 1868 ms  (duration: 26 ms)
+      Leads affected: I, II, III, aVR, aVL, aVF, V1, V2, V3, V4, V5, V6
+      Mean saliency : 0.0025  (threshold: 0.0016)
+      Severity      : 0.0008  [Low]
+    Region 4:
+      Timestamp     : 8560 ms — 8584 ms  (duration: 24 ms)
+      Leads affected: I, II, III, aVR, aVL, aVF, V1, V2, V3, V4, V5, V6
+      Mean saliency : 0.0023  (threshold: 0.0016)
+      Severity      : 0.0007  [Low]
+    Region 5:
+      Timestamp     : 9590 ms — 9624 ms  (duration: 34 ms)
+      Leads affected: I, II, III, aVR, aVL, aVF, V1, V2, V3, V4, V5, V6
+      Mean saliency : 0.0031  (threshold: 0.0016)
+      Severity      : 0.0010  [Low]
+
+SECTION 4: LEAD-WISE SALIENCY RANKING
+----------------------------------------
+  1. V1    1.000  ███████████████████
+  2. V2    0.933  ██████████████████
+  3. V6    0.811  ████████████████
+  4. V5    0.752  ███████████████
+  5. II    0.748  ██████████████
+  6. aVF   0.701  ██████████████
+
+SECTION 5: OVERALL CLINICAL IMPRESSION
+----------------------------------------
+  The AI model has identified findings consistent with CD (86%) in
+  this 12-lead ECG recording. The model assigned highest diagnostic
+  relevance to leads V1, V2, V6, which exhibited the greatest
+  gradient saliency during classification. Saliency analysis
+  identified 20 distinct regions of elevated model attention,
+  suggesting diffuse ECG abnormality across the recording. These
+  findings are generated by an automated deep learning system and
+  must be interpreted in the context of the patient's clinical
+  history, symptoms, and physical examination. Formal interpretation
+  by a qualified cardiologist is required before any clinical
+  decision is made.
+
+======================================================================
+  DISCLAIMER
+----------------------------------------
+  This report is generated by an AI research model trained on
+  the PTB-XL dataset. It is intended for research and educational
+  purposes only. It does NOT constitute a medical diagnosis.
+  All findings must be reviewed and confirmed by a licensed
+  medical professional before any clinical action is taken.
+======================================================================

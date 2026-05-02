@@ -1,0 +1,13 @@
+model,class,f1,auroc,ap
+baseline_cnn,NORM,0.8552,0.9429,0.9184
+baseline_cnn,MI,0.7298,0.9245,0.8229
+baseline_cnn,STTC,0.7617,0.9295,0.82
+baseline_cnn,CD,0.7344,0.9115,0.832
+baseline_cnn,HYP,0.4834,0.8368,0.4895
+baseline_cnn,MACRO,0.7129,0.909,0.7766
+cnn_bilstm,NORM,0.8529,0.9388,0.9142
+cnn_bilstm,MI,0.7524,0.922,0.8299
+cnn_bilstm,STTC,0.7582,0.926,0.827
+cnn_bilstm,CD,0.7568,0.9136,0.8443
+cnn_bilstm,HYP,0.4765,0.835,0.4625
+cnn_bilstm,MACRO,0.7194,0.9071,0.7756
